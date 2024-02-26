@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib import admin
 import uuid
 from django.utils.text import slugify
 
@@ -15,7 +14,7 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
-   
+
 
 class Sensor(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
